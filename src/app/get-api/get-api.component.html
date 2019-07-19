@@ -1,0 +1,22 @@
+
+<h3>Soumen</h3>
+<img src="https://flashh.in/HLD_file/CategoryImage/1559374747.jpg" alt=""> 
+
+
+<ul>
+    <li *ngFor="let data of mytestapi?.categoryList">
+
+        <p>{{data.category_id}}</p>
+        <p>{{data.category_name}}</p>
+        <p>{{data.desc}}</p>
+        <p>{{data.img}}</p>
+        <p>{{data.del_status}}</p>
+        <img src="https://flashh.in/HLD_file/CategoryImage/{{data.img}}" alt="">
+        <ul>
+            <li *ngFor="let data2 of data.subcategory">
+                <h3>{{data2.subcategory_name}}  </h3>
+                <img src="https://flashh.in/HLD_file/SubcategoryImage/{{data2.img}}" alt="Img Not Found">
+            </li>
+        </ul>
+    </li>
+</ul>
